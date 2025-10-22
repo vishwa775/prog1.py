@@ -1,14 +1,21 @@
-marks = int(input("Enter marks of the student: "))
+marks = []
 
-if marks >= 90:
+for i in range(5):
+    score = int(input(f"Enter marks for subject {i+1}: "))
+    marks.append(score)
+
+average = sum(marks) / 5
+
+if average >= 90:
     grade = "A"
-elif marks >= 75:
+elif average >= 75:
     grade = "B"
-elif marks >= 60:
+elif average >= 60:
     grade = "C"
-elif marks >= 40:
+elif average >= 40:
     grade = "D"
 else:
     grade = "Fail"
 
+print("Average Marks:", average)
 print("Grade:", grade)
